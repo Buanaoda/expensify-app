@@ -2,18 +2,33 @@ import firebase from 'firebase';
 import 'firebase/database';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyA8nT_rNkYLf0Mo01d0olD3-4whXeDxKuk",
-  authDomain: "expensify-9fc31.firebaseapp.com",
-  databaseURL: "https://expensify-9fc31-default-rtdb.firebaseio.com",
-  projectId: "expensify-9fc31",
-  storageBucket: "expensify-9fc31.appspot.com",
-  messagingSenderId: "490247712055",
-  appId: "1:490247712055:web:23f545c424c3b589bfbeb2"
+  apiKey: process.env.FIREBASE_API_KEY,
+  authDomain: process.env.FIREBASE_AUTH_DOMAIN,
+  databaseURL: process.env.FIREBASE_DATABASE_URL,
+  projectId: process.env.FIREBASE_PROJECT_ID,
+  storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
 };
 
 firebase.initializeApp(firebaseConfig);
 
 const database = firebase.database()
+
+export { firebase, database as default };
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Memory Refresher */ 
 
 // database.ref('expenses').on('child_changed', (snapshot) => {
 //   console.log(snapshot.key, snapshot.val());
@@ -102,4 +117,3 @@ const database = firebase.database()
 //     console.log('Removing data failed', e);
 //   });
  
-export { firebase, database as default };
