@@ -1,10 +1,32 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render expenses with 1 expense 1`] = `
-<div>
-  LoginPage
-  <button>
-    Login
-  </button>
+<div
+  className="box-layout"
+>
+  <div
+    className="box-layout__box"
+  >
+    <h1
+      className="box-layout__title"
+    >
+      Expensify
+    </h1>
+    <p
+      className="box-layout__text"
+    >
+      Hora de colocar suas despesas sob controle.
+    </p>
+    <div>
+      <GoogleButton
+        className="login-button"
+        disabled={false}
+        label="Sign in with Google"
+        onClick={[Function]}
+        tabIndex={0}
+        type="light"
+      />
+    </div>
+  </div>
 </div>
 `;

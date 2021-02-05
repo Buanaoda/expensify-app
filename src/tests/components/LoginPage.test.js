@@ -10,7 +10,7 @@ test('should render expenses with 1 expense', () => {
 test('should call startlogin for button click', () => {
   const startLogin = jest.fn();
   const wrapper = shallow(<LoginPage startLogin={startLogin}/>);
-  wrapper.find('button').simulate('click', {
+  wrapper.find('GoogleButton').simulate('click', {
     preventDefault: () => {}
   });
   expect(startLogin).toHaveBeenCalled();
