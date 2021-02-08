@@ -27,6 +27,23 @@ const mapDispatchToProps = (dispatch) => ({
 export default connect(undefined, mapDispatchToProps)(LoginPage);
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // <button 
 // onClick={startLogin}
 // className="box-layout__login-button"
